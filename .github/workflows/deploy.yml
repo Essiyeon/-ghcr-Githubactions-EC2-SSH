@@ -25,6 +25,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64 \
             --push \
+            -f ./my-express-app/Dockerfile \
             -t ghcr.io/${{ secrets.OWNER }}/my-express-app:latest .
 
   deploy:
